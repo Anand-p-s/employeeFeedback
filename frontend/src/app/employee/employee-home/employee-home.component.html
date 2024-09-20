@@ -1,0 +1,17 @@
+<div>
+    <div class="p-2">
+        <button class="float-end btn btn-secondary" (click)="logout()">Logout<span class="ms-2"><fa-icon [icon]="faRightFromBracket"></fa-icon></span></button>
+    </div>
+    <h3 class="mx-auto p-4" style="width: fit-content;">Performance Reviews Requires Your Feedback</h3>
+    <div class="d-flex gap-2">
+        <div class="card m-2 mt-5" style="width: 18rem;" *ngFor="let review of reviews">
+            <div class="card-body">
+                <h5 class="card-title text-center">Performance review of <strong>{{review.employeeId.name}}</strong>
+                </h5>
+                <hr>
+                <button type="button" class="btn btn-link"
+                    [routerLink]="['/feedback-form', review._id, employeeId]">Give your feedback</button>
+            </div>
+        </div>
+    </div>
+</div>

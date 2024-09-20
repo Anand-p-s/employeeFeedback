@@ -1,0 +1,14 @@
+<div class="card mx-auto mt-5" style="width: 40vw;">
+    <h4 class="my-4 mx-5">Login</h4>
+    <div class="my-3 mx-5">   
+        <div class="mb-3">
+            <label class="form-label">Email address</label>
+            <input type="email" class="form-control" [(ngModel)]="employeeCredentials.email">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-control" [(ngModel)]="employeeCredentials.password">
+        </div>
+        <button class="btn btn-primary my-3" (click)="employeeLogin()">Login</button>
+    </div>
+</div>
